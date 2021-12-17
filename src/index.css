@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.App {
+  background-color: #343a40;
+}
+
+h2 {
+  color: white
+}
+
+.showcase {
+  height: 30px;
+  background-color: transparent !important;
+}
+
+.iconss {
+  color: white;
+  
+}
+
+.headerdrop {
+  background-color: transparent !important;
+}
