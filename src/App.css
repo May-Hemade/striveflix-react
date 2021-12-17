@@ -1,7 +1,7 @@
 html,
 body,
 .App {
-  background-color: #141414;
+  background-color: #343a40;
   font-family: "Montserrat", sans-serif;
   color: white;
 }
@@ -24,3 +24,20 @@ body,
   object-fit: cover;
 }
 
+h2 {
+  color: white
+}
+
+.showcase {
+  height: 30px;
+  background-color: transparent !important;
+}
+
+.iconss {
+  color: white;
+  
+}
+
+.headerdrop {
+  background-color: transparent !important;
+}
