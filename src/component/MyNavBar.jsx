@@ -14,7 +14,7 @@ class MyNavBar extends React.Component {
     
     render() {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='nav'>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='nav' id ="navbar">
             <Navbar.Brand className='mr-0 ml-3' href="#home"><Image className='p-0' src={netflix_logo} alt="netflix logo image" height={40} width={130}/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
