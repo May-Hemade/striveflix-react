@@ -1,9 +1,12 @@
 html,
 body,
 .App {
-  background-color: #343a40;
+  background-color: black;
   font-family: "Montserrat", sans-serif;
   color: white;
+}
+#navbar {
+  background-color: black !important;
 }
 
 .carousel-control-next,
@@ -25,7 +28,7 @@ body,
 }
 
 h2 {
-  color: white
+  color: white;
 }
 
 .showcase {
@@ -35,9 +38,12 @@ h2 {
 
 .iconss {
   color: white;
-  
 }
 
 .headerdrop {
   background-color: transparent !important;
+}
+#dropdown-basic-button {
+  background-color: transparent !important;
+  border-color: white !important;
 }

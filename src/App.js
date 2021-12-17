@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap"
 import { Component } from "react"
 import MyNavBar from './component/MyNavBar';
 import Header from './component/Header';
-import StriveflixFooter from './StriveflixFooter';
+import StriveflixFooter from './component/StriveflixFooter';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -22,8 +22,9 @@ class App extends Component {
           <MovieCarousel query="harry potter" />
           <h3 className="py-3">Star Wars</h3>
           <MovieCarousel query="star wars" />
-         <StriveflixFooter/>
+         
         </Container>
+        <StriveflixFooter/>
       </div>
     )
   }
