@@ -39,7 +39,8 @@ class MyNavBar extends React.Component {
                 
                 <Nav.Link href="#notifications"><BsFillBellFill className='iconss'/></Nav.Link>
                 
-                <NavDropdown className='dropdown-menu-left'
+                <NavDropdown className='dropdown-menu-left' 
+              
                 title={<Image className="thumbnail-image" src={userprofile} className="mr-1" width="32" alt="user pic"/>} 
                 id="basic-nav-dropdown">
 
