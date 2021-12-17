@@ -1,6 +1,6 @@
 import React from 'react'
-import MyNavBar from './components/MyNavBar';
-import Header from './components/Header';
+import MyNavBar from './component/MyNavBar';
+import Header from './component/Header';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
