@@ -6,9 +6,9 @@ import {
   Container,
   Row,
   Column,
-  FooterLink,
-  Heading,
+  FooterLink
 } from "./StriveflixFooterStyles";
+import { Facebook, Instagram, Twitter,Youtube } from 'react-bootstrap-icons';
 
 import { Button } from "react-bootstrap";
   
