@@ -14,19 +14,19 @@ import MovieDetails from "./component/MovieDetails"
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <MyNavBar></MyNavBar>
-        <BrowserRouter>
+      <BrowserRouter>
+        <div className="App">
+          <MyNavBar></MyNavBar>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/tv-shows" element={<TVShows />} />
+            <Route path="/tv-shows/:query" element={<TVShows />} />
             <Route
               path="/movie-details/:movieId"
               element={<MovieDetails />}
             ></Route>
           </Routes>
-        </BrowserRouter>
-      </div>
+        </div>
+      </BrowserRouter>
     )
   }
 }
