@@ -2,48 +2,22 @@ import { Component, useState } from "react"
 import CommentsArea from "./CommentArea"
 import Modal from "react-bootstrap/Modal"
 import "../App.css"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 
-class MovieCard extends Component {
-  state = {
-    showComments: false,
-  }
+const MovieCard = ({ movie }) => {
+  const [showComments, setShowComments] = useState(false)
 
-  setShowComments = (show) => {
-    this.setState({
-      showComments: show,
-    })
-  }
-
-  showComments = () => this.setShowComments(true)
-  hideComments = () => this.setShowComments(false)
-
-  render() {
-    return (
-      <div>
+  return (
+    <div>
+      <Link to={"/movie-details/" + movie.imdbID}>
         <img
           className="img-fluid w-100 movie-img"
-          src={this.props.movie.Poster}
-          alt={this.props.movie.Title}
-          onClick={this.showComments}
+          src={movie.Poster}
+          alt={movie.Title}
         />
-        {this.state.showComments && (
-          <Modal show={true} onHide={this.hideComments}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal title</Modal.Title>
-            </Modal.Header>
-
-            <Modal.Body>
-              <CommentsArea id={this.props.movie.imdbID} />
-            </Modal.Body>
-
-            <Modal.Footer>
-              {/* <AddComment fetchComments={this.reload} id={this.props.asin} /> */}
-            </Modal.Footer>
-          </Modal>
-        )}
-      </div>
-    )
-  }
+      </Link>
+    </div>
+  )
 }
 
 export default MovieCard

@@ -12,7 +12,7 @@ class DeleteComment extends Component {
           method: "DELETE",
           headers: {
             Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWJiMzBmM2NhMTZlYjAwMTU2Yzk3NmIiLCJpYXQiOjE2Mzk2NTc3MTUsImV4cCI6MTY0MDg2NzMxNX0.ZanleSqInFZNZuXonzL1Mu8KohG4YzKkfSTko2JwDfo",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWRjM2ZlM2YyNjM3ODAwMTVlNTBkMjMiLCJpYXQiOjE2NDE5OTMwNTMsImV4cCI6MTY0MzIwMjY1M30.js5Rsp9eSBf5ZWbTJlwy28otJaqev5HoJw6PqXmPVu4",
           },
         }
       )

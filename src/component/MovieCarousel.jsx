@@ -7,9 +7,20 @@ import MovieCard from "./MovieCard"
 class MovieCarousel extends Component {
   state = {
     movies: [],
+    isLoading: false,
   }
 
   getMovies = async () => {
+    this.setState({
+      isLoading: true,
+      movies: [
+        {
+          imdbID: "aaa",
+          Poster: "https://place-hold.it/400x300",
+          Title: "loading...",
+        },
+      ],
+    })
     try {
       let response = await fetch(
         `http://www.omdbapi.com/?apikey=4440f104&s=${this.props.query}`
@@ -18,11 +29,13 @@ class MovieCarousel extends Component {
       if (response.ok) {
         let result = await response.json()
         let movieList = result.Search
-        this.setState({ movies: movieList })
+        this.setState({ movies: movieList, isLoading: false })
       } else {
         console.log(`something went wrong Don't Panic`)
+        this.setState({ movies: [], isLoading: false })
       }
     } catch (error) {
+      this.setState({ movies: [], isLoading: false })
       console.log(error)
     }
   }
