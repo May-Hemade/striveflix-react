@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Carousel from "react-bootstrap/Carousel"
 import MovieCard from "./MovieCard"
-
+import { Link } from 'react-router-dom'
 class MovieCarousel extends Component {
   state = {
     movies: [],
@@ -19,6 +19,7 @@ class MovieCarousel extends Component {
         let result = await response.json()
         let movieList = result.Search
         this.setState({ movies: movieList })
+        console.log(movieList)
       } else {
         console.log(`something went wrong Don't Panic`)
       }
@@ -54,12 +55,19 @@ class MovieCarousel extends Component {
           >
             <Row className="row w-100 mx-auto" role="listbox">
               {moviesRow.map((movie) => (
+
+      
                 <Col key={movie.imdbID} xs={12} s={6} md={3} lg={2}>
+                  
+               <Link to={"/movie-details/" + movie.imdbID}>
+      
                   <MovieCard
                     movie={movie}
                     showComments={this.props.showComments}
                   ></MovieCard>
+                    </Link>
                 </Col>
+              
               ))}
             </Row>
           </Carousel.Item>

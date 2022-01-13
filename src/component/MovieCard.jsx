@@ -3,6 +3,8 @@ import CommentsArea from "./CommentArea"
 import Modal from "react-bootstrap/Modal"
 import "../App.css"
 
+
+
 class MovieCard extends Component {
   state = {
     showComments: false,
@@ -20,12 +22,15 @@ class MovieCard extends Component {
   render() {
     return (
       <div>
+        
         <img
           className="img-fluid w-100 movie-img"
           src={this.props.movie.Poster}
           alt={this.props.movie.Title}
           onClick={this.showComments}
         />
+        
+       
         {this.state.showComments && (
           <Modal show={true} onHide={this.hideComments}>
             <Modal.Header closeButton>
